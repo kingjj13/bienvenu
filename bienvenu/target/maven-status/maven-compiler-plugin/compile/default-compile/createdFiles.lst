@@ -1,0 +1,4 @@
+beans\NavigationController.class
+beans\LieuController.class
+beans\NavigationBean.class
+beans\Lieu.class
