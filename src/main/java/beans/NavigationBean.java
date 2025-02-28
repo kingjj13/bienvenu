@@ -17,7 +17,8 @@ import java.io.IOException;
 @RequestScoped
 public class NavigationBean { 
     
-    public void voirApropos(){
+    public void redirection(String url) {
+        
         try {
             FacesContext.getCurrentInstance().getExternalContext().redirect("pages/a_propos.xhtml");
         
@@ -25,12 +26,19 @@ public class NavigationBean {
             e.printStackTrace();
         
         }
+    }
     
+    public void ajouterLieu(){
+    redirection("pages/lieu.xhtml"); }
+    
+    public void voirApropos(){
+        
+        redirection("pages/a_propos.xhtml");
     
     }
     public void voirVisiter(){
         try {
-            FacesContext.getCurrentInstance().getExternalContext().redirect("home.xhtml");
+            FacesContext.getCurrentInstance().getExternalContext().redirect("pages/visite.xhtml");
         
         }catch(IOException e){
             e.printStackTrace();
